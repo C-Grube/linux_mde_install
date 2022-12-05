@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+# Description: Simple Bash script to install MDE on Debian Linux
+# Date: 12/5/20222
+# Instructions: bash linux_install_mde.sh [/path/to/mde-onboarding-file.py]
+
+# Install pre-req software
+sudo apt-get install curl
+wait
+sudo apt-get install libplist-utils
+wait
+sudo apt-get install gpg
+wait
+sudo apt-get install apt-transport-https
+wait
+#------------------------------------------------
+# Configure the software repo
+curl -k https://packages.microsoft.com/config/debian/11/prod.list -o /etc/apt/sources.list.d/microsoft-prod.list
+wait
+curl -k -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+wait
+sudo apt-get update
+wait
+#------------------------------------------------
+# Installing the MDE application
+sudo apt-get install mdatp
+wait
+#------------------------------------------------
+# Connecting the system to a MSFT tenant
+sudo python3 $1
+
+
+
+
+
+
