@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Description: Simple Bash script to install MDE on Debian Linux
 # Date: 12/5/20222
 # Instructions: bash linux_install_mde.sh [/path/to/mde-onboarding-file.py]
@@ -29,9 +28,3 @@ wait
 #------------------------------------------------
 # Connecting the system to a MSFT tenant
 sudo python3 $1
-
-
-
-
-
-
