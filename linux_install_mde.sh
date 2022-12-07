@@ -5,13 +5,13 @@
 # Instructions: bash linux_install_mde.sh [/path/to/mde-onboarding-file.py]
 
 # Install pre-req software
-sudo apt-get install curl
+sudo apt-get --allow-unauthenticated install curl
 wait
-sudo apt-get install libplist-utils
+sudo apt-get --allow-unauthenticated install libplist-utils
 wait
-sudo apt-get install gpg
+sudo apt-get --allow-unauthenticated install gpg
 wait
-sudo apt-get install apt-transport-https
+sudo apt-get --allow-unauthenticated install apt-transport-https
 wait
 #------------------------------------------------
 # Configure the software repo
@@ -20,11 +20,11 @@ curl -k https://packages.microsoft.com/config/debian/11/prod.list -o /etc/apt/so
 wait
 curl -k -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
 wait
-sudo apt-get update
+sudo apt-get --allow-unauthenticated update
 wait
 #------------------------------------------------
 # Installing the MDE application
-sudo apt-get install mdatp
+sudo apt-get --allow-unauthenticated install mdatp
 wait
 #------------------------------------------------
 # Connecting the system to a MSFT tenant
