@@ -5,13 +5,13 @@
 #               curl -k https://raw.githubusercontent.com/C-Grube/linux_mde_install/main/linux_mde_install.sh | bash -s -- MicrosoftDefenderATPOnboardingLinuxServer.py
 
 # Install pre-req software
-sudo apt-get install curl
+sudo apt-get install curl -y
 wait
-sudo apt-get install libplist-utils
+sudo apt-get install libplist-utils -y
 wait
-sudo apt-get install gpg
+sudo apt-get install gpg -y
 wait
-sudo apt-get install apt-transport-https
+sudo apt-get install apt-transport-https -y
 wait
 #------------------------------------------------
 # Configure the software repo
@@ -26,7 +26,7 @@ sudo apt-get update
 wait
 #------------------------------------------------
 # Installing the MDE application
-sudo apt-get install mdatp
+sudo apt-get install mdatp -y
 wait
 #------------------------------------------------
 # Connecting the system to a MSFT tenant
