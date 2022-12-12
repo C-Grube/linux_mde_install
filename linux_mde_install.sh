@@ -2,7 +2,7 @@
 
 # Description: Simple Bash script to install MDE on Debian Linux
 # Instructions: bash linux_install_mde.sh [/path/to/mde-onboarding-file.py]
-#               curl -k https://raw.githubusercontent.com/C-Grube/linux_mde_install/main/linux_mde_install.sh | bash -s -- MicrosoftDefenderATPOnboardingLinuxServer
+#               curl -k https://raw.githubusercontent.com/C-Grube/linux_mde_install/main/linux_mde_install.sh | bash -s -- MicrosoftDefenderATPOnboardingLinuxServer.py
 
 # Install pre-req software
 sudo apt-get install curl
