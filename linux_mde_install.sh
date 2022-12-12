@@ -18,6 +18,8 @@ wait
 # You will have to change the below URL depending on which OS you are using. In this example, I was installing MDE on Debian 11.
 curl -k https://packages.microsoft.com/config/debian/11/prod.list -o /etc/apt/sources.list.d/microsoft-prod.list
 wait
+sed -i 's/https/http/g' /etc/apt/sources.list.d/microsoft-prod.list
+wait
 curl -k -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
 wait
 sudo apt-get update
